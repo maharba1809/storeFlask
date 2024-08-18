@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{%block title%}Catalogo{%endblock%}
+{%block content%}
+<div class="container">
+    <h1>Virtual Store</h1>
+    <p>All our Products</p>
+    <div class="container">
+        <div class="row">
+            {%for product in products%}
+            <div class="card m-2" style="width: 18rem;">
+                <div class="card-header">
+                    {{product.name}}
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Price: ${{product.price}}</li>
+                    <li class="list-group-item">Stock:{{product.quantity}}units</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+            </div>      
+            {%endfor%}
+        </div>
+    </div>
+</div>
+
+{%endblock%}

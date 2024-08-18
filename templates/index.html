@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{%block title%}Index{%endblock%}
+{%block content%}
+<ul>
+    <li><a href="{{url_for('list_products')}}"> See Products</a></li>
+    <li><a href="{{url_for('add_product')}}"> Add Product</a></li>
+    <li><a href="{{url_for('client')}}"> Client</a></li>
+     
+</ul>
+
+{%endblock%}
